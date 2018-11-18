@@ -10,6 +10,12 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBAction func testCppCall(_ sender: Any) {
+        print("Called")
+        hello_c("World".cString(using: String.Encoding.utf8))
+        CPP_Wrapper().hello_cpp_wrapped("World")
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

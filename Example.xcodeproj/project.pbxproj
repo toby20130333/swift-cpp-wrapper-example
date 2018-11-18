@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A98ADB8321A1DAED00C0E2E5 /* C.h in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8221A1DAED00C0E2E5 /* C.h */; };
+		A98ADB8521A1DB4800C0E2E5 /* CPP.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8421A1DB4800C0E2E5 /* CPP.hpp */; };
+		A98ADB8721A1DB9000C0E2E5 /* CPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8621A1DB9000C0E2E5 /* CPP.cpp */; };
+		A98ADB8921A1DC0800C0E2E5 /* C.c in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8821A1DC0800C0E2E5 /* C.c */; };
+		A98ADB8B21A1DC7A00C0E2E5 /* CPP-Wrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8A21A1DC7A00C0E2E5 /* CPP-Wrapper.h */; };
+		A98ADB8D21A1DCB100C0E2E5 /* CPP-Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A98ADB8C21A1DCB100C0E2E5 /* CPP-Wrapper.mm */; };
 		A99EB25821A1C08200572E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EB25721A1C08200572E63 /* AppDelegate.swift */; };
 		A99EB25A21A1C08200572E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EB25921A1C08200572E63 /* ViewController.swift */; };
 		A99EB25C21A1C08300572E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99EB25B21A1C08300572E63 /* Assets.xcassets */; };
@@ -14,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A98ADB7F21A1D48400C0E2E5 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		A98ADB8221A1DAED00C0E2E5 /* C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = C.h; sourceTree = "<group>"; };
+		A98ADB8421A1DB4800C0E2E5 /* CPP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPP.hpp; sourceTree = "<group>"; };
+		A98ADB8621A1DB9000C0E2E5 /* CPP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPP.cpp; sourceTree = "<group>"; };
+		A98ADB8821A1DC0800C0E2E5 /* C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = C.c; sourceTree = "<group>"; };
+		A98ADB8A21A1DC7A00C0E2E5 /* CPP-Wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPP-Wrapper.h"; sourceTree = "<group>"; };
+		A98ADB8C21A1DCB100C0E2E5 /* CPP-Wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "CPP-Wrapper.mm"; sourceTree = "<group>"; };
 		A99EB25421A1C08200572E63 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99EB25721A1C08200572E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A99EB25921A1C08200572E63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +72,13 @@
 				A99EB25D21A1C08300572E63 /* Main.storyboard */,
 				A99EB26021A1C08300572E63 /* Info.plist */,
 				A99EB26121A1C08300572E63 /* Example.entitlements */,
+				A98ADB7F21A1D48400C0E2E5 /* Example-Bridging-Header.h */,
+				A98ADB8221A1DAED00C0E2E5 /* C.h */,
+				A98ADB8421A1DB4800C0E2E5 /* CPP.hpp */,
+				A98ADB8621A1DB9000C0E2E5 /* CPP.cpp */,
+				A98ADB8821A1DC0800C0E2E5 /* C.c */,
+				A98ADB8A21A1DC7A00C0E2E5 /* CPP-Wrapper.h */,
+				A98ADB8C21A1DCB100C0E2E5 /* CPP-Wrapper.mm */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -95,6 +115,7 @@
 				TargetAttributes = {
 					A99EB25321A1C08200572E63 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -133,8 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98ADB8321A1DAED00C0E2E5 /* C.h in Sources */,
 				A99EB25A21A1C08200572E63 /* ViewController.swift in Sources */,
+				A98ADB8721A1DB9000C0E2E5 /* CPP.cpp in Sources */,
+				A98ADB8921A1DC0800C0E2E5 /* C.c in Sources */,
+				A98ADB8B21A1DC7A00C0E2E5 /* CPP-Wrapper.h in Sources */,
 				A99EB25821A1C08200572E63 /* AppDelegate.swift in Sources */,
+				A98ADB8521A1DB4800C0E2E5 /* CPP.hpp in Sources */,
+				A98ADB8D21A1DCB100C0E2E5 /* CPP-Wrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -281,6 +309,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.edwardhyde.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -289,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Example/Example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -299,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.edwardhyde.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
