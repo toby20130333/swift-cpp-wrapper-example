@@ -14,7 +14,18 @@ class ViewController: NSViewController {
         print("Called")
         hello_c("World".cString(using: String.Encoding.utf8))
         CPP_Wrapper().hello_cpp_wrapped("World")
-
+        let queue = LockFreeQueue()
+        queue.push("1" as NSObject)
+        queue.push("2" as NSObject)
+        
+        let first = queue.pop();
+        print(first as! NSString)
+        
+        let second = queue.pop();
+        print(second as! NSString)
+        
+        let third = queue.pop();
+        print(third)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
