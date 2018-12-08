@@ -25,7 +25,7 @@ class ViewController: NSViewController {
         print(second as! NSString)
         
         let third = queue.pop();
-        print(third)
+        print(third as Any)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
