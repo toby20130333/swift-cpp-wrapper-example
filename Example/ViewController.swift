@@ -10,6 +10,43 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var progress: NSTextField!
+    
+    @IBOutlet weak var input: NSTextField!
+    
+    @IBOutlet weak var result: NSTextField!
+    
+    @IBAction func check(_ sender: Any) {
+        print(input?.stringValue ?? "No value")
+        let checker = PrimeChecker()
+        
+        checker.simpleCall {
+            print("And back to Swift")
+        }
+        
+        let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
+        
+        let observer = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+        
+        dispatchQueue.async {
+            checker.checkIsPrime(self.input?.stringValue, with: { observer in
+                let mySelf = Unmanaged<ViewController>.fromOpaque(observer!).takeUnretainedValue()
+                DispatchQueue.main.async{
+                    let oldValue = mySelf.progress.stringValue
+                    mySelf.progress.stringValue = oldValue + "."
+                }
+            }, andWith: { (result : Bool, observer) in
+                print("Result...",result)
+                let mySelf = Unmanaged<ViewController>.fromOpaque(observer!).takeUnretainedValue()
+                DispatchQueue.main.async{
+                    let oldValue = mySelf.result.stringValue
+                    mySelf.result.stringValue = oldValue + " " + String(result)
+                }
+            }, withTarget: observer)
+        }
+        
+    }
+    
     @IBAction func testCppCall(_ sender: Any) {
         print("Called")
         hello_c("World".cString(using: String.Encoding.utf8))
@@ -27,6 +64,7 @@ class ViewController: NSViewController {
         let third = queue.pop();
         print(third as Any)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +76,5 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 

@@ -20,6 +20,8 @@
 		A99EB25A21A1C08200572E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EB25921A1C08200572E63 /* ViewController.swift */; };
 		A99EB25C21A1C08300572E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99EB25B21A1C08300572E63 /* Assets.xcassets */; };
 		A99EB25F21A1C08300572E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99EB25D21A1C08300572E63 /* Main.storyboard */; };
+		A9B76ABB2214883A00749352 /* prime_feature.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B76ABA2214881800749352 /* prime_feature.hpp */; };
+		A9B76ABD22148FF700749352 /* prime_feature_objc_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9B76ABC22148FF700749352 /* prime_feature_objc_wrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		A99EB25E21A1C08300572E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A99EB26021A1C08300572E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99EB26121A1C08300572E63 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		A9B76ABA2214881800749352 /* prime_feature.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prime_feature.hpp; sourceTree = "<group>"; };
+		A9B76ABC22148FF700749352 /* prime_feature_objc_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = prime_feature_objc_wrapper.mm; sourceTree = "<group>"; };
+		A9B76ABE2214915200749352 /* prime_feature_objc_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prime_feature_objc_wrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 		A99EB25621A1C08200572E63 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				A9B76ABA2214881800749352 /* prime_feature.hpp */,
 				A99EB25721A1C08200572E63 /* AppDelegate.swift */,
 				A99EB25921A1C08200572E63 /* ViewController.swift */,
 				A99EB25B21A1C08300572E63 /* Assets.xcassets */,
@@ -88,6 +94,8 @@
 				A91BBA0921A9816D00143C04 /* lock_free_queue.hpp */,
 				A91BBA1021A99DE700143C04 /* lock_free_objc_wrapper.h */,
 				A91BBA1121A99E0200143C04 /* lock_free_objc_wrapper.mm */,
+				A9B76ABC22148FF700749352 /* prime_feature_objc_wrapper.mm */,
+				A9B76ABE2214915200749352 /* prime_feature_objc_wrapper.h */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B76ABB2214883A00749352 /* prime_feature.hpp in Sources */,
 				A91BBA1521A9B3E300143C04 /* lock_free_queue.hpp in Sources */,
 				A91BBA1621A9B3E300143C04 /* lock_free_objc_wrapper.h in Sources */,
 				A98ADB8321A1DAED00C0E2E5 /* C.h in Sources */,
@@ -172,6 +181,7 @@
 				A98ADB8B21A1DC7A00C0E2E5 /* CPP-Wrapper.h in Sources */,
 				A99EB25821A1C08200572E63 /* AppDelegate.swift in Sources */,
 				A98ADB8521A1DB4800C0E2E5 /* CPP.hpp in Sources */,
+				A9B76ABD22148FF700749352 /* prime_feature_objc_wrapper.mm in Sources */,
 				A98ADB8D21A1DCB100C0E2E5 /* CPP-Wrapper.mm in Sources */,
 				A91BBA1221A99E0200143C04 /* lock_free_objc_wrapper.mm in Sources */,
 			);
