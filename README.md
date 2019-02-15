@@ -216,7 +216,6 @@ In **prime_checker.hpp**:
 class prime_checker {
 public:
     void simpleCall(void(*function)()){
-      std::cout << "Down to c++" << std::endl;
       function();
     }
 };
@@ -263,8 +262,7 @@ checker.checkIsPrime(self.input?.stringValue, with: { observer in
                 let mySelf = Unmanaged<ViewController>.fromOpaque(observer!).takeUnretainedValue()
                 // update UI from main thread using mySelf
                 DispatchQueue.main.async{
-                    let oldValue = mySelf.progress.stringValue
-                    mySelf.progress.stringValue = oldValue + "."
+                    mySelf.progress.stringValue...
                 }
             }, andWith: { (result : Bool, observer) in
                 ...
