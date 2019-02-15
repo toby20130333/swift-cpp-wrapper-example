@@ -223,3 +223,50 @@ public:
 #endif
 #endif
 ```
+
+### How to call Swift from C++ (closure WITH context)
+
+You have to pass pointer to object to closure right to C++ method and then back to Swift:
+
+In **prime_checker.hpp** 
+(void* target - raw pointer to 'self' in Swift, 
+pass it to void(*resultCallback)(bool result, void* target))):
+```cpp
+void checkIsPrime(std::string value, 
+void(*progressCallback)(void*), 
+void(*resultCallback)(bool result, void* target), 
+void* target) {
+       ...
+        progressCallback(target);
+        bool x = true;
+        resultCallback(x, target);
+        ...
+    }
+```    
+In **prime_feature_objc_wrapper.h**:
+```objc
+- (void) checkIsPrime: (NSString *)value with: (void(*)(void*)) progressCallback andWith: (void(*)(bool result, void* target)) resultCallback withTarget: (void*) target ;
+```
+In **prime_feature_objc_wrapper.mm**:
+```objc
+- (void) checkIsPrime: (NSString *)value with: (void(*)(void*)) progressCallback andWith: (void(*)(bool result, void* target)) resultCallback withTarget: (void*) target{
+    checker->checkIsPrime([value UTF8String], progressCallback, resultCallback, target);
+}
+```
+In **ViewController.swift**:
+```swift
+// raw pointer to self
+let observer = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+// pass pointer to c++ method
+checker.checkIsPrime(self.input?.stringValue, with: { observer in
+                // from raw pointer to 'self'
+                let mySelf = Unmanaged<ViewController>.fromOpaque(observer!).takeUnretainedValue()
+                // update UI from main thread using mySelf
+                DispatchQueue.main.async{
+                    let oldValue = mySelf.progress.stringValue
+                    mySelf.progress.stringValue = oldValue + "."
+                }
+            }, andWith: { (result : Bool, observer) in
+                ...
+            }, withTarget: observer)
+```
